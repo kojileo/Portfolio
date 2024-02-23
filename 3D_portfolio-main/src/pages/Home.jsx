@@ -4,7 +4,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import sakura from "../assets/sakura.mp3";
 import { HomeInfo, Loader } from "../components";
 import { soundoff, soundon } from "../assets/icons";
-import { Bird, Island, Plane, Sky, Star } from "../models";
+import { Bird, Earth, Plane, Sky, Star } from "../models";
 
 const Home = () => {
   const audioRef = useRef(new Audio(sakura));
@@ -40,7 +40,7 @@ const Home = () => {
     return [screenScale, screenPosition];
   };
 
-  const adjustIslandForScreenSize = () => {
+  const adjustEarthForScreenSize = () => {
     let screenScale, screenPosition;
 
     if (window.innerWidth < 768) {
@@ -55,7 +55,7 @@ const Home = () => {
   };
 
   const [biplaneScale, biplanePosition] = adjustBiplaneForScreenSize();
-  const [islandScale, islandPosition] = adjustIslandForScreenSize();
+  const [earthScale, earthPosition] = adjustEarthForScreenSize();
 
   return (
     <section className="w-full h-screen relative">
@@ -88,13 +88,13 @@ const Home = () => {
 
           <Bird />
           <Star isRotating={isRotating} />
-          <Island
+          <Earth
             isRotating={isRotating}
             setIsRotating={setIsRotating}
             setCurrentStage={setCurrentStage}
-            position={islandPosition}
+            position={earthPosition}
             rotation={[0.1, 4.7077, 0]}
-            scale={islandScale}
+            scale={earthScale}
           />
           <Plane
             isRotating={isRotating}
