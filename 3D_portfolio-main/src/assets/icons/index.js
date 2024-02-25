@@ -15,6 +15,7 @@ import sass from "./sass.svg";
 import tailwindcss from "./tailwindcss.svg";
 import typescript from "./typescript.svg";
 import python from "./python.svg";
+import kubernetes from "./kubernetes.svg";
 import dart from "./dart.svg";
 import linkedin from "./linkedin.svg";
 import twitter from "./twitter.svg";
@@ -48,6 +49,7 @@ export {
   typescript,
   python,
   dart,
+  kubernetes,
   linkedin,
   twitter,
   car,

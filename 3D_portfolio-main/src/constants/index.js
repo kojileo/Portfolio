@@ -1,4 +1,12 @@
-import { meta, shopify, fa, aiconsultant, aichat } from "../assets/images";
+import {
+  meta,
+  shopify,
+  fa,
+  aiconsultant,
+  azure,
+  az900,
+  aichat,
+} from "../assets/images";
 import {
   car,
   contact,
@@ -20,6 +28,7 @@ import {
   typescript,
   python,
   dart,
+  kubernetes,
 } from "../assets/icons";
 
 export const skills = [
@@ -78,6 +87,11 @@ export const skills = [
     name: "dart",
     type: "Frontend",
   },
+  {
+    imageUrl: kubernetes,
+    name: "kubernetes",
+    type: "infra",
+  },
 ];
 
 export const experiences = [
@@ -117,6 +131,35 @@ export const experiences = [
   },
 ];
 
+export const cloudthemas = [
+  {
+    title: "グローバル管理者",
+    company_name: "業務",
+    icon: azure,
+    iconBg: "#accbe1",
+    date: "2023-12",
+    points: ["業務でAzureのグローバル管理者を実施"],
+  },
+  {
+    title: "Kubernetes",
+    company_name: "自己研鑽",
+    icon: kubernetes,
+    iconBg: "#fbc3bc",
+    date: "2024-2",
+    points: [
+      "マルチプラットフォーム化に向けて自作アプリをdockerでコンテナ化し、kubectlコマンドでコンテナのライフサイクルを管理",
+    ],
+  },
+  {
+    title: "資格獲得",
+    company_name: "自己研鑽",
+    icon: az900,
+    iconBg: "#fbc3bc",
+    date: "2024-2",
+    points: ["AZ-900"],
+  },
+];
+
 export const socialLinks = [
   {
     name: "Contact",
@@ -134,49 +177,24 @@ export const cloud = [
   {
     iconUrl: pricewise,
     theme: "btn-back-red",
-    name: "Amazon Price Tracker",
+    name: "Azure",
     description:
-      "Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.",
-    link: "https://github.com/adrianhajdin/pricewise",
+      "マイクロソフトの管理するデータセンターを通してPaaS、IaaSを提供するクラウドコンピューティングサービス",
+    link: "https://azure.microsoft.com/ja-jp/free/search/?ef_id=_k_180ffeeb72801bf3a1ef9b3070e6368d_k_&OCID=AIDcmmve823aza_SEM__k_180ffeeb72801bf3a1ef9b3070e6368d_k_&msclkid=180ffeeb72801bf3a1ef9b3070e6368d",
   },
   {
     iconUrl: threads,
     theme: "btn-back-green",
-    name: "Full Stack Threads Clone",
+    name: "AWS",
     description:
-      'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-    link: "https://github.com/adrianhajdin/threads",
+      "Amazon Web Services, Inc. により提供されるクラウドコンピューティングサービス",
+    link: "https://aws.amazon.com/jp/free/?trk=087832ba-cf85-4f6c-8032-ed1c6f26a07c&sc_channel=ps&s_kwcid=AL!4422!10!71056166112754!71056691301350&ef_id=e0e31c66496f17a247b979bd4ba2116e:G:s&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all",
   },
   {
     iconUrl: car,
     theme: "btn-back-blue",
-    name: "Car Finding App",
-    description:
-      "Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.",
-    link: "https://github.com/adrianhajdin/project_next13_car_showcase",
-  },
-  {
-    iconUrl: snapgram,
-    theme: "btn-back-pink",
-    name: "Full Stack Instagram Clone",
-    description:
-      "Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.",
-    link: "https://github.com/adrianhajdin/social_media_app",
-  },
-  {
-    iconUrl: estate,
-    theme: "btn-back-black",
-    name: "Real-Estate Application",
-    description:
-      "Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.",
-    link: "https://github.com/adrianhajdin/cloud_realestate",
-  },
-  {
-    iconUrl: summiz,
-    theme: "btn-back-yellow",
-    name: "AI Summarizer Application",
-    description:
-      "App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.",
-    link: "https://github.com/adrianhajdin/project_ai_summarizer",
+    name: "GCP",
+    description: "Googleが提供しているクラウドコンピューティングサービス",
+    link: "https://cloud.google.com/gcp/?utm_source=bing&utm_medium=cpc&utm_campaign=japac-JP-all-ja-dr-bkws-all-all-trial-e-dr-1009882&utm_content=text-ad-none-none-DEV_c-CRE_-ADGP_Hybrid+%7C+BKWS+-+EXA+%7C+Txt+~+GCP+~+General_cloud+-+platform-KWID_43700071932281048-kwd-74904499603676:loc-96&userloc_140064-network_o&utm_term=KW_gcp&gclid=16193b068dcc10d995515edd8ecbb0be&gclsrc=3p.ds",
   },
 ];
