@@ -117,7 +117,7 @@ C:\Users\kojil\Documents\createapp\Portfolio
 │ Contact.jsx
 │ Home.jsx
 │ index.js
-│ Projects.jsx
+│ Cloud.jsx
 │
 └───node_modules
 ```

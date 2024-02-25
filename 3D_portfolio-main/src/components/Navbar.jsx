@@ -14,7 +14,7 @@ const Navbar = () => {
           Web
         </NavLink>
         <NavLink
-          to="/projects"
+          to="/cloud"
           className={({ isActive }) =>
             isActive ? "text-blue-600" : "text-black"
           }

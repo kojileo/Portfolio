@@ -36,7 +36,7 @@ const HomeInfo = ({ currentStage }) => {
           cloudについて学んだ知識一覧
         </p>
 
-        <Link to="/projects" className="neo-brutalism-white neo-btn">
+        <Link to="/cloud" className="neo-brutalism-white neo-btn">
           Visit
           <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
         </Link>
