@@ -1,15 +1,9 @@
-import hero from './hero.jpg'
-import meta from './meta.png'
-import shopify from './shopify.png'
-import starbucks from './starbucks.png'
-import tesla from './tesla.png'
-import logo from './logo.svg'
+import hero from "./hero.jpg";
+import meta from "./meta.png";
+import shopify from "./shopify.png";
+import fa from "./FA.png";
+import aiconsultant from "./aiconsultant.png";
+import aichat from "./aichat.png";
+import logo from "./logo.svg";
 
-export {
-    hero,
-    meta,
-    shopify,
-    starbucks,
-    tesla,
-    logo
-}
+export { hero, meta, shopify, fa, aiconsultant, aichat, logo };

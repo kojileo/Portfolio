@@ -10,7 +10,7 @@ const HomeInfo = ({ currentStage }) => {
         <span className="font-semibold mx-2 text-white">小島 怜央</span>
         です！
         <br />
-        Web開発エンジニア一年目です
+        Web、Cloud、AIをそれぞれクリックしてね～
       </h1>
     );
 

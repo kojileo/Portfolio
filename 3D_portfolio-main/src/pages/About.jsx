@@ -23,7 +23,7 @@ const About = () => {
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          愛知県出身のシステムエンジニアです。Web技術とクラウド技術について勉強中です。
+          愛知県出身、三菱電機で仕事をしています。Web技術とクラウド技術について勉強中です。
         </p>
       </div>
 

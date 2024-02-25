@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { meta, shopify, fa, aiconsultant, aichat } from "../assets/images";
 import {
   car,
   contact,
@@ -8,7 +8,6 @@ import {
   github,
   html,
   javascript,
-  linkedin,
   mui,
   nextjs,
   nodejs,
@@ -19,6 +18,8 @@ import {
   summiz,
   threads,
   typescript,
+  python,
+  dart,
 } from "../assets/icons";
 
 export const skills = [
@@ -36,11 +37,6 @@ export const skills = [
     imageUrl: github,
     name: "GitHub",
     type: "Version Control",
-  },
-  {
-    imageUrl: html,
-    name: "HTML",
-    type: "Frontend",
   },
   {
     imageUrl: javascript,
@@ -68,13 +64,18 @@ export const skills = [
     type: "Frontend",
   },
   {
-    imageUrl: sass,
-    name: "Sass",
+    imageUrl: typescript,
+    name: "TypeScript",
     type: "Frontend",
   },
   {
-    imageUrl: typescript,
-    name: "TypeScript",
+    imageUrl: python,
+    name: "Python",
+    type: "Backend",
+  },
+  {
+    imageUrl: dart,
+    name: "dart",
     type: "Frontend",
   },
 ];
@@ -82,41 +83,36 @@ export const skills = [
 export const experiences = [
   {
     title: "工場内監視アプリ",
-    company_name: "Starbucks",
-    icon: starbucks,
+    company_name: "保守保全担当者向け",
+    icon: fa,
     iconBg: "#accbe1",
     date: "2023-12",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "フロントエンドはTypeScript(React)を使用",
+      "バックエンドはC#(ASP.NET)を使用",
+      "データベースはMySQLを使用",
     ],
   },
   {
     title: "AIコンサルタント",
-    company_name: "Tesla",
-    icon: tesla,
+    company_name: "一般ユーザー向け",
+    icon: aiconsultant,
     iconBg: "#fbc3bc",
     date: "2024-2",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "フロントエンドはDart言語(flutter)を使用",
+      "バックエンドはPython(Django)を使用",
     ],
   },
   {
     title: "AIマッチングアプリ",
-    company_name: "Shopify",
-    icon: shopify,
+    company_name: "ゲームユーザー向け",
+    icon: aichat,
     iconBg: "#b7e4c7",
     date: "2024-2",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "フロントエンドはDart言語(flutter)を使用",
+      "バックエンドはPython(Django)を使用",
     ],
   },
 ];
