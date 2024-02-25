@@ -4,7 +4,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import sakura from "../assets/sakura.mp3";
 import { HomeInfo, Loader } from "../components";
 import { soundoff, soundon } from "../assets/icons";
-import { Bird, Earth, Plane, Sky, Star } from "../models";
+import { Ai, Bird, Cloud, Earth, Star, Web } from "../models";
 
 const Home = () => {
   const audioRef = useRef(new Audio(sakura));
@@ -12,8 +12,27 @@ const Home = () => {
   audioRef.current.loop = true;
 
   const [currentStage, setCurrentStage] = useState(1);
+  const [currentCenter, setCurrentCenter] = useState(1);
   const [isRotating, setIsRotating] = useState(false);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+
+  // Web コンポーネントをクリックした時のハンドラ
+  const handleWebClick = () => {
+    setCurrentStage(2); // currentStage を 2 に設定
+    setCurrentCenter(1);
+  };
+
+  // Cloud コンポーネントをクリックした時のハンドラ
+  const handleCloudClick = () => {
+    setCurrentStage(3); // currentStage を 3 に設定
+    setCurrentCenter(2);
+  };
+
+  // Ai コンポーネントをクリックした時のハンドラ
+  const handleAiClick = () => {
+    setCurrentStage(4); // currentStage を 4 に設定
+    setCurrentCenter(3);
+  };
 
   useEffect(() => {
     if (isPlayingMusic) {
@@ -25,22 +44,21 @@ const Home = () => {
     };
   }, [isPlayingMusic]);
 
-  const adjustBiplaneForScreenSize = () => {
+  const adjustEarthForScreenSize = () => {
     let screenScale, screenPosition;
 
-    // If screen width is less than 768px, adjust the scale and position
     if (window.innerWidth < 768) {
-      screenScale = [1.5, 1.5, 1.5];
-      screenPosition = [0, -1.5, 0];
+      screenScale = [0.9, 0.9, 0.9];
+      screenPosition = [0, -6.5, -86.8];
     } else {
-      screenScale = [3, 3, 3];
-      screenPosition = [0, -4, -4];
+      screenScale = [1, 1, 1];
+      screenPosition = [0, -6.5, -86.8];
     }
 
     return [screenScale, screenPosition];
   };
 
-  const adjustEarthForScreenSize = () => {
+  const adjustOneForScreenSize = () => {
     let screenScale, screenPosition;
 
     if (window.innerWidth < 768) {
@@ -54,8 +72,38 @@ const Home = () => {
     return [screenScale, screenPosition];
   };
 
-  const [biplaneScale, biplanePosition] = adjustBiplaneForScreenSize();
+  const adjustTwoForScreenSize = () => {
+    let screenScale, screenPosition;
+
+    if (window.innerWidth < 768) {
+      screenScale = [0.9, 0.9, 0.9];
+      screenPosition = [-86.8, -6.5, -86.8];
+    } else {
+      screenScale = [1, 1, 1];
+      screenPosition = [-86.8, -6.5, -86.8];
+    }
+
+    return [screenScale, screenPosition];
+  };
+
+  const adjustThreeForScreenSize = () => {
+    let screenScale, screenPosition;
+
+    if (window.innerWidth < 768) {
+      screenScale = [0.9, 0.9, 0.9];
+      screenPosition = [86.8, -6.5, -86.8];
+    } else {
+      screenScale = [1, 1, 1];
+      screenPosition = [86.8, -6.5, -86.8];
+    }
+
+    return [screenScale, screenPosition];
+  };
+
   const [earthScale, earthPosition] = adjustEarthForScreenSize();
+  const [oneScale, onePosition] = adjustOneForScreenSize();
+  const [twoScale, twoPosition] = adjustTwoForScreenSize();
+  const [threeScale, threePosition] = adjustThreeForScreenSize();
 
   return (
     <section className="w-full h-screen relative">
@@ -67,7 +115,7 @@ const Home = () => {
         className={`w-full h-screen bg-transparent ${
           isRotating ? "cursor-grabbing" : "cursor-grab"
         }`}
-        camera={{ near: 0.1, far: 1000 }}
+        camera={{ near: 0.1, far: 1000, position: [0, 0, 7] }}
         style={{ background: "black" }} // ここで背景色を設定
       >
         <Suspense fallback={<Loader />}>
@@ -85,23 +133,66 @@ const Home = () => {
             groundColor="#000000"
             intensity={1}
           />
-
           <Bird />
           <Star isRotating={isRotating} />
-          <Earth
-            isRotating={isRotating}
-            setIsRotating={setIsRotating}
-            setCurrentStage={setCurrentStage}
-            position={earthPosition}
-            rotation={[0.1, 4.7077, 0]}
-            scale={earthScale}
-          />
-          <Plane
-            isRotating={isRotating}
-            position={biplanePosition}
-            rotation={[0, 20.1, 0]}
-            scale={biplaneScale}
-          />
+          <Earth position={earthPosition} scale={earthScale} />
+          {currentCenter === 1 && (
+            <>
+              <Web
+                position={onePosition}
+                scale={oneScale}
+                onClick={handleWebClick}
+              />
+              <Cloud
+                position={twoPosition}
+                scale={twoScale}
+                onClick={handleCloudClick}
+              />
+              <Ai
+                position={threePosition}
+                scale={threeScale}
+                onClick={handleAiClick}
+              />
+            </>
+          )}
+          {currentCenter === 2 && (
+            <>
+              <Cloud
+                position={onePosition}
+                scale={oneScale}
+                onClick={handleCloudClick}
+              />
+              <Web
+                position={twoPosition}
+                scale={twoScale}
+                onClick={handleWebClick}
+              />
+              <Ai
+                position={threePosition}
+                scale={threeScale}
+                onClick={handleAiClick}
+              />
+            </>
+          )}
+          {currentCenter === 3 && (
+            <>
+              <Ai
+                position={onePosition}
+                scale={oneScale}
+                onClick={handleAiClick}
+              />
+              <Web
+                position={twoPosition}
+                scale={twoScale}
+                onClick={handleWebClick}
+              />
+              <Cloud
+                position={threePosition}
+                scale={threeScale}
+                onClick={handleCloudClick}
+              />
+            </>
+          )}
         </Suspense>
       </Canvas>
 

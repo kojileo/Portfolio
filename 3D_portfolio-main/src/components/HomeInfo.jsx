@@ -18,11 +18,11 @@ const HomeInfo = ({ currentStage }) => {
     return (
       <div className="info-box">
         <p className="font-medium sm:text-xl text-center">
-          Web開発に必要な知識を確認することができます。
+          Web開発について学んだ知識一覧
         </p>
 
         <Link to="/about" className="neo-brutalism-white neo-btn">
-          More Information
+          Visit
           <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
         </Link>
       </div>
@@ -33,7 +33,7 @@ const HomeInfo = ({ currentStage }) => {
     return (
       <div className="info-box">
         <p className="font-medium text-center sm:text-xl">
-          作成したWebアプリを確認することができます
+          cloudについて学んだ知識一覧
         </p>
 
         <Link to="/projects" className="neo-brutalism-white neo-btn">
