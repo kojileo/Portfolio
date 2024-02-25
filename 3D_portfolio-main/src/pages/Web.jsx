@@ -7,7 +7,7 @@ import { experiences, skills } from "../constants";
 
 import "react-vertical-timeline-component/style.min.css";
 
-const About = () => {
+const Web = () => {
   return (
     <section className="max-container">
       <h1 className="head-text">
@@ -108,4 +108,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Web;

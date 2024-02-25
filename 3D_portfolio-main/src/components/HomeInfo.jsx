@@ -21,7 +21,7 @@ const HomeInfo = ({ currentStage }) => {
           Web開発について学んだ知識一覧
         </p>
 
-        <Link to="/about" className="neo-brutalism-white neo-btn">
+        <Link to="/web" className="neo-brutalism-white neo-btn">
           Visit
           <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
         </Link>
