@@ -21,7 +21,7 @@ const Cloud = () => {
       </h1>
 
       <p className="text-slate-500 mt-2 leading-relaxed">
-        AzureとAWSとGCPについて身に着けた知識一覧です。
+        クラウドについて身に着けた知識一覧です。
       </p>
 
       <div className="flex flex-wrap my-20 gap-16">
